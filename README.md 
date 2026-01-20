@@ -1,0 +1,27 @@
+# PolyTalk 🌍
+
+PolyTalk é uma aplicação simples desenvolvida em Kotlin com o objetivo de demonstrar o conceito de internacionalização (i18n).
+
+## 🎯 Objetivo
+Aplicar os conhecimentos adquiridos no módulo de Kotlin da DIO, criando um projeto que suporte múltiplos idiomas.
+
+## 🌐 Idiomas suportados
+- Português (pt-BR)
+- Inglês (en-US)
+- Espanhol (es-ES)
+
+## 🛠 Tecnologias utilizadas
+- Kotlin
+- Gradle
+- ResourceBundle (Java/Kotlin i18n)
+
+## ▶️ Como executar
+1. Clone o repositório
+2. Abra o projeto no IntelliJ IDEA
+3. Execute a função `main` do arquivo `Main.kt`
+4. Escolha o idioma desejado no terminal
+
+## 📚 Conceitos aplicados
+- Internacionalização (i18n)
+- Organização de recursos por idioma
+- Uso de Locale e ResourceBundle

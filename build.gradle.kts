@@ -1,22 +1,16 @@
 plugins {
-    kotlin("jvm") version "2.2.21"
+    kotlin("jvm") version "1.9.22"
+    application
 }
-
-group = "org.example"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
+application {
+    mainClass.set("com.ariane.polytalk.MainKt")
 }
 
-kotlin {
-    jvmToolchain(17)
-}
-
-tasks.test {
-    useJUnitPlatform()
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }

@@ -1,16 +1,33 @@
-package org.example
+package com.ariane.polytalk
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Locale
+import java.util.ResourceBundle
+
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+    println("Select language / Selecione o idioma / Seleccione el idioma")
+    println("1 - Português")
+    println("2 - English")
+    println("3 - Español")
+    print("Opção: ")
+
+    val option = readLine()?.trim()
+
+    val locale = when (option) {
+        "1" -> Locale("pt", "BR")
+        "2" -> Locale("en", "US")
+        "3" -> Locale("es", "ES")
+        else -> {
+            println("Opção inválida. Usando Português como padrão.")
+            Locale("pt", "BR")
+        }
     }
+
+    Locale.setDefault(locale)
+
+    val messages = ResourceBundle.getBundle("messages")
+
+    println()
+    println(messages.getString("app.welcome"))
+    println(messages.getString("app.message"))
 }
